@@ -22,7 +22,8 @@ $(function(){
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 2,
+          centerMode: false,
         }
       }
     ]
