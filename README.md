@@ -1,1 +1,1 @@
-# cdn
+# Atualizar texto por JS
