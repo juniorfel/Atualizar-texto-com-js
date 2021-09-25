@@ -1,4 +1,4 @@
 # Atualizar texto por JS
 ```
-Atualizar texto com JS
+Basta indexar o script na tag <head> e fazer as modificações necessárias
 ```
