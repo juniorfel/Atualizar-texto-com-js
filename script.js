@@ -1,36 +1,13 @@
-
-$(function(){
-
-  function atualizar_informacoes() {
-    $("#watch-name").text( $(".slick-center").data("name") );
-    var watchPrice = parseFloat($(".slick-center").data("price")).toLocaleString("pt-BR", {style:"currency", currency: "BRL", minimumFractionDigits: 2});
-    $("#watch-price").text( watchPrice );
-  }
-
-  $(".watch-slider").on('init', function(){
-    atualizar_informacoes();
-  });
-
-  $(".watch-slider").slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    centerMode: true,
-    prevArrow: $("#arrow-prev"),
-    nextArrow: $("#arrow-next"),
-    responsive: [
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
-  });
-
-  $(".watch-slider").on('afterChange', function(){
-    atualizar_informacoes();
-  });
-
-})
-
+<script>
+$(document).ready(function(){
+    var textos = ["TEXTO 1", "TEXTO 2", "TEXTO 3"]; //Textos
+    var atual = 0;
+    $('#info').text(textos[atual++]);
+    setInterval(function() {
+        $('#info').fadeOut(function() {
+            if (atual >= textos.length) atual = 0;
+            $('#info').text(textos[atual++]).fadeIn(); //Efeito
+        });
+    }, 3500); //Tempo
+});
+    </script>
